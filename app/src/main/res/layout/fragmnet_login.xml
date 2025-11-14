@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/shape_background"
+    android:layoutDirection="rtl">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/shape_page_login"
+       />
+    
+    <RelativeLayout
+        android:id="@id/element_id_login_fragment_rel_toggles"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/shape_rel_page_login"
+        >
+
+        <ToggleButton
+            android:id="@id/element_id_login_fragment_btn_register_card"
+            android:layout_width="180dp"
+            android:layout_height="match_parent"
+            android:checked="false"
+            android:background="@drawable/shape_btn_toggle_login"
+            android:textOff="ثبت نام"
+            android:textColor="@color/selector_toggle_btn_register"
+            android:textOn="ثبت نام"
+
+            android:textSize="16sp"
+            />
+
+        <ToggleButton
+            android:id="@id/element_id_login_fragment_btn_login_card"
+            android:layout_width="180dp"
+            android:layout_height="match_parent"
+            android:checked="true"
+            android:background="@drawable/shape_btn_toggle_login"
+            android:layout_alignParentEnd="true"
+            android:textOff="ورود به برنامه"
+            android:textColor="@color/selector_toggle_btn_register"
+            android:textOn="ورود به برتامه"
+            android:textSize="16sp"
+            />
+
+    </RelativeLayout>
+
+
+
+
+    <!--card for register and btn Register-->
+    <LinearLayout
+        android:id="@id/element_id_login_fragment_linear_form_register"
+        android:orientation="vertical"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/element_id_login_fragment_rel_toggles"
+        android:background="@drawable/shape_card_login"
+        android:layout_marginTop="70dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="صفحه ثبت نام"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="50dp"
+            >
+            
+            <EditText
+                android:id="@id/element_id_login_fragment_edit_user_name_register"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@null"
+                android:textColorHint="@color/item_color"
+                android:hint="نام کاربر"
+                android:textColor="@color/item_color"
+                android:paddingStart="15dp"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/item_color"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="5dp"
+                />
+            
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/baseline_person_outline_24"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="15dp"
+                app:tint="@color/item_color"
+                />
+            
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="20dp"
+            >
+
+            <EditText
+                android:id="@id/element_id_login_fragment_edit_user_family_register"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@null"
+                android:textColorHint="@color/item_color"
+                android:hint="فامیلی کاربر"
+                android:textColor="@color/item_color"
+                android:paddingStart="15dp"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/item_color"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="5dp"
+                />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/baseline_person_outline_24"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="15dp"
+                app:tint="@color/item_color"
+                />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="20dp"
+            >
+
+            <EditText
+                android:id="@id/element_id_login_fragment_edit_user_email_register"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@null"
+                android:textColorHint="@color/item_color"
+                android:hint="ایمیل کاربر"
+                android:textColor="@color/item_color"
+                android:paddingStart="15dp"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/item_color"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="5dp"
+                />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/baseline_email_24"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="15dp"
+                app:tint="@color/item_color"
+                />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="20dp"
+
+            android:layout_marginBottom="50dp"
+            >
+
+            <EditText
+                android:id="@id/element_id_login_fragment_edit_user_password_register"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@null"
+                android:textColorHint="@color/item_color"
+                android:hint="رمز عبور"
+                android:textColor="@color/item_color"
+                android:paddingStart="15dp"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/item_color"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="5dp"
+                />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/baseline_vpn_key_24"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="15dp"
+                app:tint="@color/item_color"
+                />
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@id/element_id_login_fragment_btn_register"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/shape_btn_login"
+        android:text="ثبت نام"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        />
+
+
+
+
+
+    <!--card for login and btn login-->
+    <LinearLayout
+        android:id="@id/element_id_login_fragment_linear_form_login"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/element_id_login_fragment_rel_toggles"
+        android:background="@drawable/shape_card_login"
+        android:layout_marginTop="70dp"
+        >
+
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="صفحه ورود"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            />
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="50dp"
+            >
+
+            <EditText
+                android:id="@id/element_id_login_fragment_edit_user_email_login"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@null"
+                android:textColorHint="@color/item_color"
+                android:hint="ایمیل کاربر"
+                android:textColor="@color/item_color"
+                android:paddingStart="15dp"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/item_color"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="5dp"
+                />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/baseline_email_24"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="15dp"
+                app:tint="@color/item_color"
+                />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="50dp"
+            >
+
+            <EditText
+                android:id="@id/element_id_login_fragment_edit_user_password_login"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@null"
+                android:textColorHint="@color/item_color"
+                android:hint="رمز عبور"
+                android:textColor="@color/item_color"
+                android:paddingStart="15dp"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/item_color"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="5dp"
+                />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/baseline_vpn_key_24"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="15dp"
+                app:tint="@color/item_color"
+                />
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@id/element_id_login_fragment_btn_login"
+        android:visibility="gone"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/shape_btn_login"
+        android:text="ورود"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        />
+
+
+
+    
+</RelativeLayout>

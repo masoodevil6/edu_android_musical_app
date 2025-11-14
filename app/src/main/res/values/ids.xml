@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--first_activity-->
+    <item name="element_id_first_activity_frame_layout" type="id"/>
+
+
+    <!--splash_fragment-->
+    <item name="element_id_splash_fragment_lottie" type="id"/>
+
+
+    <!--intro_fragment-->
+    <item name="element_id_intro_fragment_view_pager" type="id"/>
+    <item name="element_id_intro_fragment_tab_layout" type="id"/>
+    <item name="element_id_intro_fragment_btn_submit" type="id"/>
+
+
+
+    <!--intro_recycler_view-->
+    <item name="element_id_intro_recycler_view_lottie_anim" type="id"/>
+    <item name="element_id_intro_recycler_view_txt_description" type="id"/>
+
+
+    <!--login_fragment-->
+    <item name="element_id_login_fragment_rel_toggles" type="id"/>
+    <item name="element_id_login_fragment_btn_login_card" type="id"/>
+    <item name="element_id_login_fragment_btn_register_card" type="id"/>
+
+    <item name="element_id_login_fragment_linear_form_register" type="id"/>
+    <item name="element_id_login_fragment_edit_user_name_register" type="id"/>
+    <item name="element_id_login_fragment_edit_user_family_register" type="id"/>
+    <item name="element_id_login_fragment_edit_user_email_register" type="id"/>
+    <item name="element_id_login_fragment_edit_user_password_register" type="id"/>
+    <item name="element_id_login_fragment_btn_register" type="id"/>
+    <item name="element_id_login_fragment_linear_form_login" type="id"/>
+    <item name="element_id_login_fragment_edit_user_email_login" type="id"/>
+    <item name="element_id_login_fragment_edit_user_password_login" type="id"/>
+    <item name="element_id_login_fragment_btn_login" type="id"/>
+
+    <!--menu-->
+    <item name="element_id_layout_menu_txt_user_name" type="id"/>
+    <item name="element_id_layout_menu_txt_user_email" type="id"/>
+    <item name="element_id_layout_menu_linear_item_search" type="id"/>
+    <item name="element_id_layout_menu_linear_item_favorite" type="id"/>
+    <item name="element_id_layout_menu_linear_item_all_music" type="id"/>
+    <item name="element_id_layout_menu_linear_all_artist" type="id"/>
+    <item name="element_id_layout_menu_linear_item_all_video" type="id"/>
+    <item name="element_id_layout_menu_linear_item_all_download" type="id"/>
+    <item name="element_id_layout_menu_linear_item_add_music" type="id"/>
+    <item name="element_id_layout_menu_linear_item_my_films" type="id"/>
+    <item name="element_id_layout_menu_linear_item_exit" type="id"/>
+
+    <!--fragment_detail_music-->
+    <item name="element_id_fragment_detail_music_image_music" type="id"/>
+    <item name="element_id_fragment_detail_music_card_for_image_music" type="id"/>
+    <item name="element_id_fragment_detail_music_image_in_card_for_image_music" type="id"/>
+    <item name="element_id_fragment_detail_music_text_artist_name" type="id"/>
+    <item name="element_id_fragment_detail_music_text_music_name" type="id"/>
+    <item name="element_id_fragment_detail_music_text_music_time_duration" type="id"/>
+    <item name="element_id_fragment_detail_music_text_music_time_play" type="id"/>
+    <item name="element_id_fragment_detail_music_relative_layout_tools" type="id"/>
+    <item name="element_id_fragment_detail_music_btn_replay_music" type="id"/>
+    <item name="element_id_fragment_detail_music_btn_forward_music" type="id"/>
+    <item name="element_id_fragment_detail_music_btn_play_music" type="id"/>
+    <item name="element_id_fragment_detail_music_btn_back_music" type="id"/>
+    <item name="element_id_fragment_detail_music_btn_fav_music" type="id"/>
+    <item name="element_id_fragment_detail_music_image_fav_music" type="id"/>
+    <item name="element_id_fragment_detail_music_btn_download_music" type="id"/>
+    <item name="element_id_fragment_detail_music_seek_arc" type="id"/>
+
+
+    <!--fragment_favorite-->
+    <item name="element_id_fragment_favorite_image_back" type="id"/>
+    <item name="element_id_fragment_favorite_rel_item_singer" type="id"/>
+    <item name="element_id_fragment_favorite_rel_item_music" type="id"/>
+    <item name="element_id_fragment_favorite_rel_item_video" type="id"/>
+    <item name="element_id_fragment_favorite_rel_item_client" type="id"/>
+
+
+    <!--fragment_favorite_details-->
+    <item name="element_id_fragment_favorite_detail_txt_title_category_fav" type="id"/>
+    <item name="element_id_fragment_favorite_detail_txt_recycler_view_list" type="id"/>
+
+    <!--fragment_favorite_details_item-->
+    <item name="element_id_adapter_favorite_item_music_rel_fav_music" type="id"/>
+    <item name="element_id_adapter_favorite_item_music_cir_image_fav_music" type="id"/>
+    <item name="element_id_adapter_favorite_item_txt_artist_name_fav_music" type="id"/>
+    <item name="element_id_adapter_favorite_item_txt_music_name_fav_music" type="id"/>
+
+
+    <!--fragment_search-->
+    <item name="element_id_favorite_search_card_image_btn_back" type="id"/>
+    <item name="element_id_favorite_search_card_type_singer_iran" type="id"/>
+    <item name="element_id_favorite_search_card_type_singer_foreign" type="id"/>
+    <item name="element_id_favorite_search_card_type_music_add" type="id"/>
+    <item name="element_id_favorite_search_card_type_music" type="id"/>
+    <item name="element_id_favorite_search_card_type_video" type="id"/>
+
+    <!--fragment_detail_search-->
+    <item name="element_id_favorite_details_search_image_btn_back" type="id"/>
+    <item name="element_id_favorite_details_search_text_tool_bar" type="id"/>
+    <item name="element_id_favorite_details_search_edit_text_search" type="id"/>
+    <item name="element_id_favorite_details_search_rec_list_searched" type="id"/>
+
+    <!--recycler_artist_search-->
+    <item name="element_id_recycler_artist_search_image_singer" type="id"/>
+    <item name="element_id_recycler_artist_search_txt_name_singer" type="id"/>
+
+    <!--recycler_music_search-->
+    <item name="element_id_recycler_music_search_image_music" type="id"/>
+    <item name="element_id_recycler_music_search_txt_name_music" type="id"/>
+    <item name="element_id_recycler_music_search_txt_name_artist" type="id"/>
+
+
+    <!--fragment_all_artist-->
+    <item name="element_id_fragment_all_artist_image_btn_back" type="id"/>
+    <item name="element_id_fragment_all_artist_recycler_view_list_artist" type="id"/>
+
+
+    <!--recycler_all_artist-->
+    <item name="element_id_recycler_all_artist_image_artist" type="id"/>
+    <item name="element_id_recycler_all_artist_txt_artist_name" type="id"/>
+    <item name="element_id_recycler_all_artist_txt_music_num" type="id"/>
+    <item name="element_id_fragment_all_artist_relative_layout_btns" type="id"/>
+    <item name="element_id_fragment_all_artist_image_btn_fav" type="id"/>
+
+    <!--fragment_all_music-->
+    <item name="element_id_fragment_all_music_image_btn_back" type="id"/>
+    <item name="element_id_fragment_all_music_recycler_view_list_music" type="id"/>
+
+    <!--recycler_all_music-->
+    <item name="element_id_recycler_all_music_image_music" type="id"/>
+    <item name="element_id_recycler_all_music_txt_artist_name" type="id"/>
+    <item name="element_id_recycler_all_music_txt_music_name" type="id"/>
+    <item name="element_id_recycler_all_music_relative_layout_btns" type="id"/>
+    <item name="element_id_recycler_all_music_image_btn_fav" type="id"/>
+
+
+    <!--recycler_video-->
+    <item name="element_id_recycler_video_image_video" type="id"/>
+    <item name="element_id_recycler_video_image_fav" type="id"/>
+    <item name="element_id_recycler_video_txt_title_video" type="id"/>
+    <item name="element_id_recycler_video_txt_time_video" type="id"/>
+
+
+    <!--fragment_detail_video-->
+    <item name="element_id_fragment_video_rel_parent" type="id"/>
+    <item name="element_id_fragment_video_video_player" type="id"/>
+
+    <!--layout_video_player-->
+    <item name="element_id_layout_video_player_relative_toolbar" type="id"/>
+    <item name="element_id_layout_video_player_relative_parent" type="id"/>
+    <item name="element_id_layout_video_player_txt_video_name" type="id"/>
+    <item name="element_id_layout_video_player_image_btn_back" type="id"/>
+    <item name="element_id_layout_video_player_image_brn_download" type="id"/>
+    <item name="element_id_layout_video_player_image_brn_fav" type="id"/>
+    <item name="element_id_layout_video_player_image_brn_play" type="id"/>
+    <item name="element_id_layout_video_player_image_brn_replay" type="id"/>
+    <item name="element_id_layout_video_player_image_brn_forward" type="id"/>
+    <item name="element_id_layout_video_player_txt_time_start" type="id"/>
+    <item name="element_id_layout_video_player_txt_time_end" type="id"/>
+    <item name="element_id_layout_video_player_seek_bar_player" type="id"/>
+
+
+    <!--recycler_video_fav-->
+    <item name="element_id_recycler_video_fav_image_video" type="id"/>
+    <item name="element_id_recycler_video_fav_txt_name_video" type="id"/>
+
+
+    <!--recycler_video_search-->
+    <item name="element_id_recycler_video_search_image_video" type="id"/>
+    <item name="element_id_recycler_video_search_txt_name_video" type="id"/>
+
+    <!--fragment_video_app-->
+    <item name="element_id_fragment_video_app_image_btn_back" type="id"/>
+    <item name="element_id_fragment_video_app_recycler_view_videos" type="id"/>
+
+    <!--recycler_video_app-->
+    <item name="element_id_recycler_video_app_image_video" type="id"/>
+    <item name="element_id_recycler_video_app_txt_name_video" type="id"/>
+
+    <!--dialog-->
+    <item name="element_id_layout_dialog_txt_title" type="id"/>
+    <item name="element_id_layout_dialog_txt_message" type="id"/>
+    <item name="element_id_layout_dialog_btn_accept" type="id"/>
+    <item name="element_id_layout_dialog_btn_cancel" type="id"/>
+
+
+    <!--fragment_add-->
+    <item name="element_id_fragment_add_relative_toolbar" type="id"/>
+    <item name="element_id_fragment_add_txt_title_page" type="id"/>
+    <item name="element_id_fragment_add_image_btn_back" type="id"/>
+    <item name="element_id_fragment_add_recycler_view_list" type="id"/>
+    <item name="element_id_fragment_add_relative_btn_add" type="id"/>
+
+
+    <!--fragment_add_music-->
+    <item name="element_id_fragment_add_music_relative_toolbar" type="id"/>
+    <item name="element_id_fragment_add_music_image_btn_back" type="id"/>
+    <item name="element_id_fragment_add_music_relative_btn_submit" type="id"/>
+    <item name="element_id_fragment_add_music_relative_artist_name" type="id"/>
+    <item name="element_id_fragment_add_music_edit_artist_name" type="id"/>
+    <item name="element_id_fragment_add_music_relative_music_name" type="id"/>
+    <item name="element_id_fragment_add_music_edit_music_name" type="id"/>
+    <item name="element_id_fragment_add_music_relative_music_url" type="id"/>
+    <item name="element_id_fragment_add_music_edit_music_url" type="id"/>
+
+
+
+    <!--recycler_item_add_music-->
+    <item name="element_id_recycler_item_add_music_image_music" type="id"/>
+    <item name="element_id_recycler_item_add_music_txt_music_name" type="id"/>
+    <item name="element_id_recycler_item_add_music_txt_artist_name" type="id"/>
+    <item name="element_id_recycler_item_add_music_rel_left_one" type="id"/>
+    <item name="element_id_recycler_item_add_music_rel_left_two" type="id"/>
+    <item name="element_id_recycler_item_add_music_image_btn_fav" type="id"/>
+
+
+    <!--recycler_item_add_music_fav-->
+    <item name="element_id_recycler_item_add_music_fav_image_music" type="id"/>
+    <item name="element_id_recycler_item_add_music_fav_txt_music_name" type="id"/>
+    <item name="element_id_recycler_item_add_music_fav_txt_artist_name" type="id"/>
+    <item name="element_id_recycler_item_add_music_fav_image_btn_fav" type="id"/>
+
+
+
+    <!--fragment_detail_music_add-->
+    <item name="element_id_fragment_detail_music_btn_back_music_add" type="id"/>
+    <item name="element_id_fragment_detail_music_btn_fav_music_add" type="id"/>
+    <item name="element_id_fragment_detail_music_image_fav_music_add" type="id"/>
+    <item name="element_id_fragment_detail_music_card_for_image_music_add" type="id"/>
+    <item name="element_id_fragment_detail_music_text_artist_name_add" type="id"/>
+    <item name="element_id_fragment_detail_music_text_music_name_add" type="id"/>
+    <item name="element_id_fragment_detail_music_text_music_time_duration_add" type="id"/>
+    <item name="element_id_fragment_detail_music_text_music_time_play_add" type="id"/>
+    <item name="element_id_fragment_detail_music_relative_layout_tools_add" type="id"/>
+    <item name="element_id_fragment_detail_music_btn_replay_music_add" type="id"/>
+    <item name="element_id_fragment_detail_music_btn_forward_music_add" type="id"/>
+    <item name="element_id_fragment_detail_music_btn_play_music_add" type="id"/>
+    <item name="element_id_fragment_detail_music_btn_download_music_add" type="id"/>
+    <item name="element_id_fragment_detail_music_seek_arc_add" type="id"/>
+
+
+</resources>

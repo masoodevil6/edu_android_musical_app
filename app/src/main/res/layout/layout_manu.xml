@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="end"
+    android:layout_gravity="end"
+    android:layout_marginVertical="30dp">
+
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/shape_back_menu">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:weightSum="7">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:background="@color/color_aid"
+                android:layout_gravity="center"
+                android:layout_weight="2.5"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="2"
+                android:text="موزیکال"
+                android:textColor="@color/color_aid"
+                android:textSize="16sp"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:background="@color/color_aid"
+                android:layout_gravity="center"
+                android:layout_weight="2.5"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/image_music"
+            />
+
+        <TextView
+            android:id="@id/element_id_layout_menu_txt_user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="name user"
+            android:textColor="@color/color_aid"
+            android:layout_marginHorizontal="10dp"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@id/element_id_layout_menu_txt_user_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="email user"
+            android:textColor="@color/color_aid"
+            android:layout_marginHorizontal="10dp"
+            android:textSize="14sp"/>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@id/element_id_layout_menu_linear_item_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:weightSum="5"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/shape_item_menu">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="جستجو"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:gravity="center"/>
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/baseline_search_24"
+                        app:tint="@color/color_aid" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@id/element_id_layout_menu_linear_item_favorite"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:weightSum="5"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/baseline_favorite_border_24"
+                        app:tint="@color/color_aid" />
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/shape_item_menu">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="مورد علاقه مندی ها"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:gravity="center"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@id/element_id_layout_menu_linear_item_all_music"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:weightSum="5"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/shape_item_menu">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="تمام اهنگ ها"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:gravity="center"/>
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/baseline_music_video_24"
+                        app:tint="@color/color_aid" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@id/element_id_layout_menu_linear_all_artist"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:weightSum="5"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/baseline_person_outline_24"
+                        app:tint="@color/color_aid" />
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/shape_item_menu">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="تمام خواننده ها"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:gravity="center"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@id/element_id_layout_menu_linear_item_all_video"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:weightSum="5"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/shape_item_menu">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="تمام ویدئو ها"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:gravity="center"/>
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/baseline_ondemand_video_24"
+                        app:tint="@color/color_aid" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@id/element_id_layout_menu_linear_item_all_download"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:weightSum="5"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/baseline_download_24"
+                        app:tint="@color/color_aid" />
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/shape_item_menu">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="دانلود ها"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:gravity="center"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@id/element_id_layout_menu_linear_item_add_music"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:weightSum="5"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/shape_item_menu">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="اهنگ های اضافه شده"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:gravity="center"/>
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/baseline_add_box_24"
+                        app:tint="@color/color_aid" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@id/element_id_layout_menu_linear_item_my_films"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:weightSum="5"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/baseline_videocam_24"
+                        app:tint="@color/color_aid" />
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/shape_item_menu">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="فیلم های من"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:gravity="center"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@id/element_id_layout_menu_linear_item_exit"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:weightSum="5"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/shape_item_menu">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="خروج"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:gravity="center"/>
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/baseline_exit_to_app_24"
+                        app:tint="@color/color_aid" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

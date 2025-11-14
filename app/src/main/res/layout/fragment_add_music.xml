@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl"
+    android:background="@color/white">
+
+
+
+    <RelativeLayout
+        android:id="@id/element_id_fragment_add_music_relative_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@drawable/shape_toolbar_add"
+        android:layout_margin="10dp"
+        android:elevation="20dp">
+
+        <TextView
+            android:id="@id/element_id_fragment_add_txt_title_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="افزودن/ ویاریش موزیک من"
+            android:textColor="@color/primary_color_dark"
+            android:textSize="18sp"
+            android:layout_centerInParent="true"/>
+
+
+        <ImageView
+            android:id="@id/element_id_fragment_add_music_image_btn_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/baseline_arrow_back_24"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="8dp"
+            android:rotation="180"
+            app:tint="@color/primary_color"
+            />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:background="@drawable/shape_add_music_top">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/shape_add_music_bottom">
+
+    </RelativeLayout>
+
+
+
+
+
+
+    <RelativeLayout
+        android:id="@id/element_id_fragment_add_music_relative_btn_submit"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/shape_toolbar_add"
+        android:layout_marginBottom="30dp"
+        android:layout_centerHorizontal="true"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="افزودن / ویرایش"
+            android:textColor="@color/background"
+            android:textSize="16sp"
+            android:layout_centerInParent="true"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/shape_btn_add_fragment_oval_add"
+        android:layout_marginBottom="30dp"
+        android:layout_marginStart="-30dp"
+        android:layout_toEndOf="@id/element_id_fragment_add_music_relative_btn_submit"
+        >
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/shape_btn_add_fragment_oval_add"
+        android:layout_marginBottom="30dp"
+        android:layout_marginEnd="-30dp"
+        android:layout_toStartOf="@id/element_id_fragment_add_music_relative_btn_submit"
+        >
+    </RelativeLayout>
+
+
+
+
+    <RelativeLayout
+        android:id="@id/element_id_fragment_add_music_relative_artist_name"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_below="@id/element_id_fragment_add_music_relative_toolbar"
+        android:layout_marginTop="40dp"
+        >
+
+        <EditText
+            android:id="@id/element_id_fragment_add_music_edit_artist_name"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@null"
+            android:hint="نام خواننده:"
+            android:textColor="@color/background"
+            android:textColorHint="@color/background"
+            android:layout_marginHorizontal="10dp"
+            android:gravity="center_vertical"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/element_id_fragment_add_music_edit_artist_name"
+            android:background="@color/background"
+            />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@id/element_id_fragment_add_music_relative_music_name"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_below="@id/element_id_fragment_add_music_relative_artist_name"
+        android:layout_marginTop="40dp"
+        >
+
+        <EditText
+            android:id="@id/element_id_fragment_add_music_edit_music_name"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@null"
+            android:hint="نام موسقی:"
+            android:textColor="@color/background"
+            android:textColorHint="@color/background"
+            android:layout_marginHorizontal="10dp"
+            android:gravity="center_vertical"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/element_id_fragment_add_music_edit_music_name"
+            android:background="@color/background"
+            />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@id/element_id_fragment_add_music_relative_music_url"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_below="@id/element_id_fragment_add_music_relative_music_name"
+        android:layout_marginTop="40dp"
+        >
+
+        <EditText
+            android:id="@id/element_id_fragment_add_music_edit_music_url"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@null"
+            android:hint="آدرس موسقی:"
+            android:textColor="@color/background"
+            android:textColorHint="@color/background"
+            android:layout_marginHorizontal="10dp"
+            android:gravity="center_vertical"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/element_id_fragment_add_music_edit_music_url"
+            android:background="@color/background"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

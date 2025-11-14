@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="140dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="15dp"
+    android:layout_marginEnd="10dp"
+    android:layoutDirection="rtl"
+    android:id="@id/element_id_adapter_favorite_item_music_rel_fav_music">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@id/element_id_adapter_favorite_item_music_cir_image_fav_music"
+        android:scaleType="centerCrop"
+        android:layout_centerHorizontal="true"
+        android:elevation="20dp"
+        />
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="@color/item_color">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="name artist"
+                android:textColor="@color/background"
+                android:layout_marginTop="40dp"
+                android:id="@id/element_id_adapter_favorite_item_txt_artist_name_fav_music"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="name artist"
+                android:textColor="@color/background"
+                android:layout_marginTop="40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"
+                android:id="@id/element_id_adapter_favorite_item_txt_music_name_fav_music"
+                />
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

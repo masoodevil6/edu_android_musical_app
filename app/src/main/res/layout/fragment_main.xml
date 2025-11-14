@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl"
+    tools:openDrawer="end"
+    android:gravity="end"
+    android:layout_gravity="end"
+    android:background="@drawable/shape_background"
+    android:id="@+id/drawer_layout">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@drawable/shape_toolbar"
+                android:layout_margin="10dp"
+                android:elevation="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="موزیکال"
+                    android:textColor="@color/item_color"
+                    android:textSize="18sp"
+                    android:layout_centerInParent="true"/>
+
+                <ImageView
+                    android:id="@+id/btn_menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/baseline_menu_24"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="8dp"/>
+
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:id="@+id/rel_more_music_new"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:elevation="20dp"
+                android:background="@drawable/shape_more_one">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="موزیک های جدید"
+                    android:textSize="15sp"
+                    android:textColor="@color/background"
+                    android:paddingHorizontal="5dp"
+                    android:layout_alignParentRight="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="بیشتر>"
+                    android:textSize="15sp"
+                    android:textColor="@color/background"
+                    android:paddingHorizontal="5dp"
+                    android:layout_alignParentLeft="true"/>
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/recycler_main_music_new"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"/>
+
+
+
+
+            <RelativeLayout
+                android:id="@+id/rel_more_artist_iri"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:elevation="20dp"
+                android:background="@drawable/shape_more_two">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text=" ایرانی"
+                    android:textSize="15sp"
+                    android:textColor="@color/selector_txt_more"
+                    android:paddingHorizontal="5dp"
+                    android:layout_alignParentRight="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="بیشتر>"
+                    android:textSize="15sp"
+                    android:textColor="@color/selector_txt_more2"
+                    android:paddingHorizontal="5dp"
+                    android:layout_alignParentLeft="true"/>
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/recycler_main_music_artist_iranian"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"/>
+
+
+
+
+
+            <RelativeLayout
+                android:id="@+id/rel_more_artist_for"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:elevation="20dp"
+                android:background="@drawable/shape_more_two">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text=" خارجی"
+                    android:textSize="15sp"
+                    android:textColor="@color/selector_txt_more"
+                    android:paddingHorizontal="5dp"
+                    android:layout_alignParentRight="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="بیشتر>"
+                    android:textSize="15sp"
+                    android:textColor="@color/selector_txt_more2"
+                    android:paddingHorizontal="5dp"
+                    android:layout_alignParentLeft="true"/>
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/recycler_main_music_artist_forign"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"/>
+
+
+
+
+
+            <RelativeLayout
+                android:id="@+id/rel_more_music_pop"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:elevation="20dp"
+                android:background="@drawable/shape_more_one">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="محبوب ترین ها"
+                    android:textSize="15sp"
+                    android:textColor="@color/background"
+                    android:paddingHorizontal="5dp"
+                    android:layout_alignParentRight="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="بیشتر>"
+                    android:textSize="15sp"
+                    android:textColor="@color/background"
+                    android:paddingHorizontal="5dp"
+                    android:layout_alignParentLeft="true"/>
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/recycler_main_music_pop"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"/>
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_video"
+                android:layout_marginHorizontal="10dp"
+                android:orientation="vertical"
+                android:layout_marginTop="15dp"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/rel_more_video"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="10dp"
+                    android:elevation="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="ریدئو موزیک ها"
+                        android:textSize="15sp"
+                        android:textColor="@color/background"
+                        android:layout_alignParentRight="true"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="بیشتر>"
+                        android:textSize="15sp"
+                        android:textColor="@color/background"
+                        android:paddingHorizontal="5dp"
+                        android:layout_alignParentLeft="true"/>
+
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_main_video"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <include layout="@layout/layout_manu"/>
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@id/element_id_layout_video_player_relative_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:id="@id/element_id_layout_video_player_relative_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@drawable/shape_toolbar"
+        android:layout_margin="10dp"
+        android:elevation="20dp">
+
+        <TextView
+            android:id="@id/element_id_layout_video_player_txt_video_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ویدئو"
+            android:textColor="@color/item_color"
+            android:textSize="18sp"
+            android:layout_centerInParent="true"/>
+
+
+        <ImageView
+            android:id="@id/element_id_layout_video_player_image_btn_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/baseline_arrow_back_24"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="8dp"
+            android:rotation="180"
+            />
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:cardCornerRadius="5dp"
+        app:cardBackgroundColor="@color/primary_color_dark"
+        android:layout_below="@id/element_id_layout_video_player_relative_toolbar"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp">
+
+        <ImageView
+            android:id="@id/element_id_layout_video_player_image_brn_download"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:src="@drawable/baseline_download_24"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_alignParentEnd="true"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:cardCornerRadius="5dp"
+        app:cardBackgroundColor="@color/primary_color_dark"
+        android:layout_below="@id/element_id_layout_video_player_relative_toolbar"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp">
+
+        <ImageView
+            android:id="@id/element_id_layout_video_player_image_brn_fav"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:src="@drawable/baseline_favorite_border_24"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/shape_detail_video"
+        android:layout_alignParentBottom="true"
+        >
+
+        <RelativeLayout
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/shape_btn_play_music"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            >
+
+            <ImageView
+                android:id="@id/element_id_layout_video_player_image_brn_play"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/baseline_play_arrow_24"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/shape_btn_play_music"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginEnd="40dp"
+            >
+
+            <ImageView
+                android:id="@id/element_id_layout_video_player_image_brn_replay"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/baseline_replay_5_24"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/shape_btn_play_music"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginStart="40dp"
+            >
+
+            <ImageView
+                android:id="@id/element_id_layout_video_player_image_brn_forward"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/baseline_forward_5_24"
+                />
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:weightSum="7">
+
+            <TextView
+                android:id="@id/element_id_layout_video_player_txt_time_end"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="01:23"
+                android:gravity="center"/>
+
+            <SeekBar
+                android:id="@id/element_id_layout_video_player_seek_bar_player"
+                android:layout_width="0dp"
+                android:layoutDirection="ltr"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"/>
+
+            <TextView
+                android:id="@id/element_id_layout_video_player_txt_time_start"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="00:00"
+                android:gravity="center"/>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

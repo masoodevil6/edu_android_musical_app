@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layoutDirection="rtl"
+    android:background="@drawable/shape_item_add_music"
+    android:layout_marginBottom="15dp">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@id/element_id_recycler_item_add_music_image_music"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:src="@drawable/music_main"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="5dp"
+        />
+
+    
+    <TextView
+        android:id="@id/element_id_recycler_item_add_music_txt_music_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Music  Name"
+        android:textColor="@color/background"
+        android:textSize="18sp"
+        android:layout_toEndOf="@id/element_id_recycler_item_add_music_image_music"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        />
+
+
+    <TextView
+        android:id="@id/element_id_recycler_item_add_music_txt_artist_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Artist  Name"
+        android:textColor="@color/background"
+        android:textSize="18sp"
+        android:layout_toEndOf="@id/element_id_recycler_item_add_music_image_music"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="10dp"
+        />
+
+    <RelativeLayout
+        android:id="@id/element_id_recycler_item_add_music_rel_left_one"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:layout_centerVertical="true"
+        android:background="@drawable/shape_btn_add_fragment_oval"
+        />
+
+    <RelativeLayout
+        android:id="@id/element_id_recycler_item_add_music_rel_left_two"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="30dp"
+        android:layout_centerVertical="true"
+        android:background="@drawable/shape_oval_item_add_music"
+        />
+
+
+    <ImageView
+        android:id="@id/element_id_recycler_item_add_music_image_btn_fav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_favorite_border_24"
+        app:tint="@color/primary_color"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="45dp"
+        />
+
+</RelativeLayout>
