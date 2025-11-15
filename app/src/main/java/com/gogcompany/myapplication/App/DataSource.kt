@@ -238,7 +238,7 @@ class DataSource {
 
         val jsonObjectRequest = JsonObjectRequest(
             Request.Method.POST ,
-            linkAllMusics+"?user_email=" + userEmail + "&user_password="+ userPassword,
+            linkCheckLogin+"?user_email=" + userEmail + "&user_password="+ userPassword,
             null,
             { response->
                 try {
@@ -258,6 +258,9 @@ class DataSource {
                         sp.setUserFamily(userFamily)
                         sp.setUserEmail(userEmailIn)
                         sp.setUserPassword(userPasswordIn)
+                        sp.setIntro(true)
+                        sp.setLogin(true)
+                        sp.apply();
 
                         i++;
                     }

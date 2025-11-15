@@ -83,4 +83,10 @@ class SharePref(
         editor.putBoolean(KeyLogin , login);
         editor.commit();
     }
+
+
+
+    fun apply(){
+        editor.apply()
+    }
 }
