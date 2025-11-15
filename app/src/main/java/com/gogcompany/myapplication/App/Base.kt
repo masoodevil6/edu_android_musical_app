@@ -13,6 +13,7 @@ object Base:Application() {
     lateinit var activitySplash: Activity;
     lateinit var fragmentManager: FragmentManager;
     lateinit var dbApp: DBApp;
+    lateinit var sharePref: SharePref;
 
     override fun onCreate() {
         super.onCreate();

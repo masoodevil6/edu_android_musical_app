@@ -25,12 +25,11 @@
             android:id="@id/element_id_login_fragment_btn_register_card"
             android:layout_width="180dp"
             android:layout_height="match_parent"
-            android:checked="false"
+            android:checked="true"
             android:background="@drawable/shape_btn_toggle_login"
             android:textOff="ثبت نام"
             android:textColor="@color/selector_toggle_btn_register"
             android:textOn="ثبت نام"
-
             android:textSize="16sp"
             />
 
@@ -38,7 +37,7 @@
             android:id="@id/element_id_login_fragment_btn_login_card"
             android:layout_width="180dp"
             android:layout_height="match_parent"
-            android:checked="true"
+            android:checked="false"
             android:background="@drawable/shape_btn_toggle_login"
             android:layout_alignParentEnd="true"
             android:textOff="ورود به برنامه"

@@ -1,9 +1,11 @@
 package com.gogcompany.myapplication.App
 
 import android.app.Activity
+import android.content.Intent
 import android.database.sqlite.SQLiteConstraintException
 import android.util.Log
 import android.widget.Toast
+import androidx.core.content.ContextCompat
 import com.android.volley.Request
 import com.android.volley.RequestQueue
 import com.android.volley.toolbox.JsonObjectRequest
@@ -11,6 +13,7 @@ import com.android.volley.toolbox.StringRequest
 import com.gogcompany.myapplication.DataBase.Artist.Artists
 import com.gogcompany.myapplication.DataBase.Music.Musics
 import com.gogcompany.myapplication.DataBase.Video.Video
+import com.gogcompany.myapplication.MainActivity
 
 class DataSource {
 
@@ -19,6 +22,7 @@ class DataSource {
     val linkAllVideos = host + "videos.php";
     val linkRegister = host + "users.php";
     val linkLogin = host + "login.php";
+    val linkCheckLogin = host + "check_login.php";
 
     fun getAllArtists(requestQueue: RequestQueue){
         val jsonObjectRequest = JsonObjectRequest(
@@ -167,7 +171,7 @@ class DataSource {
 
 
 
-    fun registerClient(requestQueue: RequestQueue , activity: Activity ,userName:String, userFamily:String, userEmail:String , userPassword:String){
+    fun registerClient(requestQueue: RequestQueue , activity: Activity ,userName:String, userFamily:String, userEmail:String , userPassword:String , callback:OnFinishRegisterOrLogin){
         var stringRequest = object:  StringRequest(
             Request.Method.POST ,
             linkRegister ,
@@ -175,6 +179,8 @@ class DataSource {
                 response->
                 if (response.equals("register user is success")){
                     Toast.makeText(activity , response.toString() , Toast.LENGTH_LONG).show();
+                    this.checkLogin(requestQueue, activity , userEmail , userPassword);
+                    callback.onFinish();
                 }
                 else{
                     Toast.makeText(activity , "response Register: " + response.toString() , Toast.LENGTH_LONG).show();
@@ -198,7 +204,7 @@ class DataSource {
     }
 
 
-    fun registerLogin(requestQueue: RequestQueue , activity: Activity , userEmail:String , userPassword:String){
+    fun loginLogin(requestQueue: RequestQueue, activity: Activity, userEmail:String, userPassword:String, callback:OnFinishRegisterOrLogin){
         var stringRequest = object:  StringRequest(
             Request.Method.POST ,
             linkLogin ,
@@ -206,6 +212,8 @@ class DataSource {
                 response->
                 if (response.equals("user is login")){
                     Toast.makeText(activity , response.toString() , Toast.LENGTH_LONG).show();
+                    this.checkLogin(requestQueue, activity , userEmail , userPassword);
+                    callback.onFinish();
                 }
                 else{
                     Toast.makeText(activity , "response login: " + response.toString() , Toast.LENGTH_LONG).show();
@@ -224,6 +232,52 @@ class DataSource {
             }
         }
         requestQueue.add(stringRequest);
+    }
+
+    fun checkLogin(requestQueue: RequestQueue , activity: Activity  ,userEmail:String, userPassword:String){
+
+        val jsonObjectRequest = JsonObjectRequest(
+            Request.Method.POST ,
+            linkAllMusics+"?user_email=" + userEmail + "&user_password="+ userPassword,
+            null,
+            { response->
+                try {
+                    val jsonArray = response.getJSONArray("isLogin");
+                    var i = 0;
+                    while (i<jsonArray.length()){
+                        val jsonObject = jsonArray.getJSONObject(i);
+                        val userId = jsonObject.getInt("id");
+                        val userName = jsonObject.getString("name");
+                        val userFamily = jsonObject.getString("family");
+                        val userEmailIn = jsonObject.getString("email");
+                        val userPasswordIn = jsonObject.getString("password");
+
+                        val sp = SharePref(activity);
+                        sp.setUserId(userId)
+                        sp.setUserName(userName)
+                        sp.setUserFamily(userFamily)
+                        sp.setUserEmail(userEmailIn)
+                        sp.setUserPassword(userPasswordIn)
+
+                        i++;
+                    }
+                }
+                catch (e:SQLiteConstraintException){
+                    e.printStackTrace();
+                }
+            },
+            {
+                error->
+                Toast.makeText(activity , "response ERR: " + error.message , Toast.LENGTH_LONG).show();
+            }
+        )
+        requestQueue.add(jsonObjectRequest);
+    }
+
+
+
+    interface OnFinishRegisterOrLogin{
+        fun onFinish();
     }
 
 }

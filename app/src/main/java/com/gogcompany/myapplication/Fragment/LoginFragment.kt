@@ -1,5 +1,6 @@
 package com.gogcompany.myapplication.Fragment
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
 import android.view.LayoutInflater
@@ -10,14 +11,13 @@ import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.Toast
 import android.widget.ToggleButton
-import androidx.compose.ui.unit.TextUnit
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
-import com.android.volley.Request
 import com.android.volley.RequestQueue
-import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import com.gogcompany.myapplication.App.Base
 import com.gogcompany.myapplication.App.DataSource
+import com.gogcompany.myapplication.MainActivity
 import com.gogcompany.myapplication.R
 
 class LoginFragment() : Fragment() {
@@ -127,7 +127,12 @@ class LoginFragment() : Fragment() {
             Toast.makeText(Base.activitySplash , "فیلد رمز عبور را پر کنید" , Toast.LENGTH_LONG) .show();
         }
         else{
-            dataSource.registerClient(requestQueue , Base.activitySplash , userName , userFamily , userEmail , userPassword)
+            dataSource.registerClient(requestQueue , Base.activitySplash , userName , userFamily , userEmail , userPassword, object: DataSource.OnFinishRegisterOrLogin{
+                override fun onFinish() {
+                    startActivity(Intent(Base.activitySplash , MainActivity::class.java))
+                    Base.activitySplash?.finish()
+                }
+            })
         }
     }
 
@@ -142,7 +147,16 @@ class LoginFragment() : Fragment() {
             Toast.makeText(Base.activitySplash , "فیلد رمز عبور را پر کنید" , Toast.LENGTH_LONG) .show();
         }
         else{
-            dataSource.registerLogin(requestQueue , Base.activitySplash , userEmail , userPassword)
+            dataSource.loginLogin(requestQueue , Base.activitySplash , userEmail , userPassword , object: DataSource.OnFinishRegisterOrLogin{
+                override fun onFinish() {
+                    startActivity(Intent(Base.activitySplash , MainActivity::class.java))
+                    Base.activitySplash?.finish()
+                }
+            })
+
         }
     }
+
+
+
 }
