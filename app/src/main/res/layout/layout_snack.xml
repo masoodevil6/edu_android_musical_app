@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_background_snack"
+    android:layoutDirection="rtl"
+    >
+
+    <TextView
+        android:id="@id/element_id_layout_snack_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="title"
+        android:textColor="@color/white"
+        android:layout_marginTop="15dp"
+        android:layout_marginHorizontal="10dp"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:id="@id/element_id_layout_snack_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="msg"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="10dp"
+        android:textSize="18sp"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="25dp"
+        android:layout_marginHorizontal="10dp"
+        >
+
+        <Button
+            android:id="@id/element_id_layout_btm_first"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:background="@drawable/shape_btn_snack"
+            android:text="first"
+            android:textSize="18sp"
+            />
+
+        <Button
+            android:id="@id/element_id_layout_btm_second"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:background="@drawable/shape_btn_snack"
+            android:text="second"
+            android:textSize="18sp"
+            android:layout_toEndOf="@id/element_id_layout_btm_first"
+            android:layout_marginStart="20dp"
+            />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

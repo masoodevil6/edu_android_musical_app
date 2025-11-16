@@ -241,4 +241,12 @@
     <item name="element_id_fragment_detail_music_seek_arc_add" type="id"/>
 
 
+
+
+
+    <!--layout snack-->
+    <item name="element_id_layout_snack_title" type="id"/>
+    <item name="element_id_layout_snack_msg" type="id"/>
+    <item name="element_id_layout_btm_first" type="id"/>
+    <item name="element_id_layout_btm_second" type="id"/>
 </resources>
