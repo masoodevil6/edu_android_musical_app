@@ -1,8 +1,11 @@
 package com.gogcompany.myapplication.Fragment
 
+import android.app.DownloadManager
+import android.content.Context
 import android.net.Uri
 import android.os.AsyncTask
 import android.os.Bundle
+import android.os.Environment
 import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
@@ -205,6 +208,20 @@ class DetailVideoFragment() : Fragment() {
                 Base.dbApp!!.favVideoDao().deleteVideo(favVideo);
                 btnFav.setImageResource(R.drawable.baseline_favorite_border_24)
             }
+        }
+
+
+
+        btnDownload.setOnClickListener {
+            val request = DownloadManager.Request(Uri.parse(videoData!!.videoLinkVideo));
+            request.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_MOBILE or DownloadManager.Request.NETWORK_MOBILE);
+            request.setTitle("Download")
+            request.setDescription("Download Video ..." + videoData!!.videoName)
+            request.allowScanningByMediaScanner();
+            request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+            request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS , "directory/music/"+System.currentTimeMillis()+".mp4");
+            val manager = Base.activitySplash.getSystemService(Context.DOWNLOAD_SERVICE) as DownloadManager;
+            manager.enqueue(request)
         }
 
     }

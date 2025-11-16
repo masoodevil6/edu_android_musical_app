@@ -11,7 +11,7 @@
         android:layout_height="250dp"
         android:background="@drawable/shape_page_login"
        />
-    
+
     <RelativeLayout
         android:id="@id/element_id_login_fragment_rel_toggles"
         android:layout_width="300dp"
@@ -31,6 +31,7 @@
             android:textColor="@color/selector_toggle_btn_register"
             android:textOn="ثبت نام"
             android:textSize="16sp"
+            android:elevation="2dp"
             />
 
         <ToggleButton
@@ -44,9 +45,11 @@
             android:textColor="@color/selector_toggle_btn_register"
             android:textOn="ورود به برتامه"
             android:textSize="16sp"
+            android:elevation="1dp"
             />
 
     </RelativeLayout>
+
 
 
 

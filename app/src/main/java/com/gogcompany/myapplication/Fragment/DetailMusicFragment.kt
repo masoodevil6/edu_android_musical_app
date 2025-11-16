@@ -1,8 +1,12 @@
 package com.gogcompany.myapplication.Fragment
 
+import android.app.DownloadManager
+import android.content.Context
 import android.media.MediaPlayer
+import android.net.Uri
 import android.os.AsyncTask
 import android.os.Bundle
+import android.os.Environment
 import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
@@ -192,6 +196,18 @@ class DetailMusicFragment() :Fragment(){
             })
 
 
+
+            btnDownload.setOnClickListener {
+                val request = DownloadManager.Request(Uri.parse(musicData!!.musicLinkMusic));
+                request.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_MOBILE or DownloadManager.Request.NETWORK_MOBILE);
+                request.setTitle("Download")
+                request.setDescription("Download Music ..." + musicData!!.musicName)
+                request.allowScanningByMediaScanner();
+                request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+                request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS , "directory/music/"+System.currentTimeMillis()+".mp3");
+                val manager = Base.activitySplash.getSystemService(Context.DOWNLOAD_SERVICE) as DownloadManager;
+                manager.enqueue(request)
+            }
 
 
             if (!mediaPlayer.isPlaying){

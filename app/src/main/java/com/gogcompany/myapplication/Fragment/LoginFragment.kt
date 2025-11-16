@@ -76,6 +76,7 @@ class LoginFragment() : Fragment() {
         btnToggleLogin.setOnClickListener {
             btnToggleRegister.isChecked = false;
             btnToggleLogin.isChecked = true;
+            btnToggleLogin.elevation = 2F
 
             cardRegister.visibility = View.GONE;
             cardLogin.visibility = View.VISIBLE;
@@ -88,6 +89,7 @@ class LoginFragment() : Fragment() {
         btnToggleRegister.setOnClickListener {
             btnToggleLogin.isChecked = false;
             btnToggleRegister.isChecked = true;
+            btnToggleRegister.elevation = 2F
 
             cardRegister.visibility = View.VISIBLE
             cardLogin.visibility = View.GONE
