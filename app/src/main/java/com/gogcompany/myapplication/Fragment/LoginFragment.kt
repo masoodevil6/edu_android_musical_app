@@ -3,10 +3,14 @@ package com.gogcompany.myapplication.Fragment
 import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
+import android.text.method.HideReturnsTransformationMethod
+import android.text.method.PasswordTransformationMethod
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.CheckBox
+import android.widget.CompoundButton
 import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.Toast
@@ -35,6 +39,8 @@ class LoginFragment() : Fragment() {
     lateinit var edtUserPasswordRegister: EditText;
     lateinit var edtUserEmailLogin: EditText;
     lateinit var edtUserPasswordLogin: EditText;
+    lateinit var checkboxPasswordRegister: CheckBox;
+    lateinit var checkboxPasswordLogin: CheckBox;
 
     lateinit var dataSource: DataSource;
     lateinit var requestQueue: RequestQueue;
@@ -61,17 +67,23 @@ class LoginFragment() : Fragment() {
         edtUserFamilyRegister = layout.findViewById(R.id.element_id_login_fragment_edit_user_family_register)
         edtUserEmailRegister = layout.findViewById(R.id.element_id_login_fragment_edit_user_email_register)
         edtUserPasswordRegister = layout.findViewById(R.id.element_id_login_fragment_edit_user_password_register)
+        checkboxPasswordRegister = layout.findViewById(R.id.element_id_login_fragment_check_pass_register)
+
 
         cardLogin = layout.findViewById(R.id.element_id_login_fragment_linear_form_login);
         btnLogin = layout.findViewById(R.id.element_id_login_fragment_btn_login);
         edtUserEmailLogin = layout.findViewById(R.id.element_id_login_fragment_edit_user_email_login)
         edtUserPasswordLogin = layout.findViewById(R.id.element_id_login_fragment_edit_user_password_login)
+        checkboxPasswordLogin = layout.findViewById(R.id.element_id_login_fragment_check_pass_login)
 
         dataSource = DataSource();
         requestQueue = Volley.newRequestQueue(Base.activitySplash);
     }
 
     private fun setViews() {
+        btnToggleLogin.isChecked = false;
+        btnToggleRegister.isChecked = true;
+        btnToggleRegister.elevation = 2F
 
         btnToggleLogin.setOnClickListener {
             btnToggleRegister.isChecked = false;
@@ -97,6 +109,28 @@ class LoginFragment() : Fragment() {
             btnRegister.visibility = View.VISIBLE;
             btnLogin.visibility = View.GONE;
         }
+
+
+        checkboxPasswordRegister.setOnCheckedChangeListener(object :CompoundButton.OnCheckedChangeListener{
+            override fun onCheckedChanged(p0: CompoundButton?, check: Boolean) {
+                if (check){
+                    edtUserPasswordRegister.transformationMethod = HideReturnsTransformationMethod.getInstance()
+                }
+                else{
+                    edtUserPasswordRegister.transformationMethod = PasswordTransformationMethod.getInstance()
+                }
+            }
+        })
+        checkboxPasswordLogin.setOnCheckedChangeListener(object :CompoundButton.OnCheckedChangeListener{
+            override fun onCheckedChanged(p0: CompoundButton?, check: Boolean) {
+                if (check){
+                    edtUserPasswordLogin.transformationMethod = HideReturnsTransformationMethod.getInstance()
+                }
+                else{
+                    edtUserPasswordLogin.transformationMethod = PasswordTransformationMethod.getInstance()
+                }
+            }
+        })
 
 
 

@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
+import android.widget.TextView
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
@@ -74,6 +75,10 @@ class MainFragment(): Fragment() {
     lateinit var btnAllArtist: LinearLayout
     lateinit var btmVideoApp: LinearLayout
     lateinit var btnAddMusic: LinearLayout
+    lateinit var btnExit: LinearLayout
+
+    lateinit var txtName: TextView
+    lateinit var txtEmail: TextView
 
     private fun cast(){
 
@@ -131,6 +136,12 @@ class MainFragment(): Fragment() {
         setFragment(VideoAllFragment() , moreVideo, argVideo);
 
 
+        txtName = layout.findViewById(R.id.element_id_layout_menu_txt_user_name)
+        txtEmail = layout.findViewById(R.id.element_id_layout_menu_txt_user_email)
+
+        txtName.text = Base.sharePref.getUserName() + " "  + Base.sharePref.getUserFamily();
+        txtEmail.text = Base.sharePref.getUserEmail();
+
 
         btnSearch = layout.findViewById(R.id.element_id_layout_menu_linear_item_search)
         btnSearch.setOnClickListener {
@@ -165,6 +176,11 @@ class MainFragment(): Fragment() {
         btnAddMusic = layout.findViewById(R.id.element_id_layout_menu_linear_item_add_music)
         btnAddMusic.setOnClickListener {
             goToFragment(AddFragment() )
+        }
+
+        btnExit = layout.findViewById(R.id.element_id_layout_menu_linear_item_exit)
+        btnExit.setOnClickListener {
+            Base.activity.finish();
         }
     }
 

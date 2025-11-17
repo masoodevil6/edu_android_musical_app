@@ -31,10 +31,12 @@
     <item name="element_id_login_fragment_edit_user_family_register" type="id"/>
     <item name="element_id_login_fragment_edit_user_email_register" type="id"/>
     <item name="element_id_login_fragment_edit_user_password_register" type="id"/>
+    <item name="element_id_login_fragment_check_pass_register" type="id"/>
     <item name="element_id_login_fragment_btn_register" type="id"/>
     <item name="element_id_login_fragment_linear_form_login" type="id"/>
     <item name="element_id_login_fragment_edit_user_email_login" type="id"/>
     <item name="element_id_login_fragment_edit_user_password_login" type="id"/>
+    <item name="element_id_login_fragment_check_pass_login" type="id"/>
     <item name="element_id_login_fragment_btn_login" type="id"/>
 
     <!--menu-->
